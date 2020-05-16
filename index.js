@@ -23,8 +23,8 @@ bot.on(BotEvents.SUBSCRIBED, response => {
     response.send(new TextMessage(`Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me anything.`));
 });
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
-  if (message.text=="ку"){
-    response.send(new TextMessage("Ваше сообщение"+JSON.stringify(message)));
+  if (message.text=="Привет"||"привет"){
+    response.send(new TextMessage("И вам не хворать."+response));
   }
     
 });
