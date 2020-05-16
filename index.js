@@ -23,7 +23,10 @@ bot.on(BotEvents.SUBSCRIBED, response => {
     response.send(new TextMessage(`Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me anything.`));
 });
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
+  if (message.text=="ку"){
     response.send(new TextMessage("Ваше сообщение"+JSON.stringify(message)));
+  }
+    
 });
 const port = process.env.PORT || 3000;
 app.use("/viber/webhook", bot.middleware());
