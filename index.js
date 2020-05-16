@@ -16,7 +16,7 @@ if (!process.env.EXPOSE_URL) {
 
 const bot = new ViberBot({
     authToken: process.env.BOT_ACCOUNT_TOKEN,
-    name: "Botan",
+    name: "4ictoserde4no",
     avatar: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Katze_weiss.png"
 });
 bot.on(BotEvents.SUBSCRIBED, response => {
