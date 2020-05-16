@@ -24,7 +24,7 @@ bot.on(BotEvents.SUBSCRIBED, response => {
 });
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
   if (message.text=="Привет"||"привет"){
-    response.send(new TextMessage("И вам не хворать."+response));
+    response.send(new TextMessage("И вам не хворать."+JSON.stringify(response)));
   }
     
 });
