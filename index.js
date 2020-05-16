@@ -16,14 +16,14 @@ if (!process.env.EXPOSE_URL) {
 
 const bot = new ViberBot({
     authToken: process.env.BOT_ACCOUNT_TOKEN,
-    name: "4ictoserde4no",
+    name: "BuySell",
     avatar: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Katze_weiss.png"
 });
 bot.on(BotEvents.SUBSCRIBED, response => {
     response.send(new TextMessage(`Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me anything.`));
 });
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
-    response.send(new TextMessage(`А я не дам`));
+    response.send(new TextMessage("Ваше сообщение"+message));
 });
 const port = process.env.PORT || 3000;
 app.use("/viber/webhook", bot.middleware());
